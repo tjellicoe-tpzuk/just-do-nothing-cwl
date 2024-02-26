@@ -12,7 +12,7 @@ $graph:
     - id: outputs
       type: Directory
       outputSource:
-        - do-create-file/results
+        - do-create-stac/results
 
     steps:
       do-create-stac:
