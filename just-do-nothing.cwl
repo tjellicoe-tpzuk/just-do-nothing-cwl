@@ -4,7 +4,7 @@ s:softwareVersion: 0.0.1
 $graph:
   # Workflow entrypoint
   - class: Workflow
-    id: main
+    id: nothing
     label: do absolutely nothing and complete execution
     doc: Does absolutely nothing and completes execution
     inputs: []
