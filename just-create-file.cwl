@@ -4,26 +4,32 @@ s:softwareVersion: 0.0.1
 $graph:
   # Workflow entrypoint
   - class: Workflow
-    id: do-nothing
-    label: do absolutely nothing and complete execution
-    doc: Does absolutely nothing and completes execution
+    id: main
+    label: Create a catalog.json file and end
+    doc: Creates a catalog.json file and ends
     inputs: []
-    outputs: []
+    outputs:
+    - id: outputs
+      type: File
+      outputSource:
+        - do-create-file/results
+
     steps:
-      do-nothing:
-        run: '#do-nothing'
+      do-create-file:
+        run: '#do-create-file'
         in: []
-        out: []
+        out:
+          - results
 
   - class: CommandLineTool
-    id: do-nothing
+    id: do-create-file
     inputs: []
     outputs:
       results:
-        type: Directory
+        type: File
         outputBinding:
-          glob: .
+          glob: catalog.json
     requirements:
-    DockerRequirement:
+      DockerRequirement:
         dockerPull: tjellicoetpzuk/create-file:latest
         
