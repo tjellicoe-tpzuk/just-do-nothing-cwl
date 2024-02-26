@@ -4,9 +4,9 @@ s:softwareVersion: 0.0.1
 $graph:
   # Workflow entrypoint
   - class: Workflow
-    id: main
-    label: Create a catalog.json file and end
-    doc: Creates a catalog.json file and ends
+    id: create-stac
+    label: Create a stac item including catalog file and tif file (blank file)
+    doc: Creates a stac item including catalog file and tif file (blank file)
     inputs: []
     outputs:
     - id: outputs
@@ -15,14 +15,14 @@ $graph:
         - do-create-file/results
 
     steps:
-      do-create-file:
-        run: '#do-create-file'
+      do-create-stac:
+        run: '#do-create-stac'
         in: []
         out:
           - results
 
   - class: CommandLineTool
-    id: do-create-file
+    id: do-create-stac
     inputs: []
     outputs:
       results:

@@ -4,7 +4,7 @@ s:softwareVersion: 0.0.1
 $graph:
   # Workflow entrypoint
   - class: Workflow
-    id: main
+    id: create-file
     label: Create a catalog.json file and end
     doc: Creates a catalog.json file and ends
     inputs: []
