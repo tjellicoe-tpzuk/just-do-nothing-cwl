@@ -16,10 +16,14 @@ $graph:
         out: []
 
   - class: CommandLineTool
-    baseCommand: ["echo"]
     id: do-nothing
     inputs: []
-    outputs: []
+    outputs:
+      results:
+        type: Directory
+        outputBinding:
+          glob: .
     requirements:
-      DockerRequirement:
-        dockerPull: tjellicoetpzuk/echo:latest
+    DockerRequirement:
+        dockerPull: tjellicoetpzuk/create-file:latest
+        
