@@ -5,7 +5,7 @@
     {
       "type": "application/geo+json",
       "rel": "item",
-      "href": "data/item.json"
+      "href": "item.json"
     },
     {
       "type": "application/json",
