@@ -4,20 +4,20 @@ s:softwareVersion: 0.0.1
 $graph:
   # Workflow entrypoint
   - class: Workflow
-    id: nothing
+    id: echo-test
     label: do absolutely nothing and complete execution
     doc: Does absolutely nothing and completes execution
     inputs: []
     outputs: []
     steps:
-      do-nothing:
-        run: '#do-nothing'
+      do-echo:
+        run: '#do-echo'
         in: []
         out: []
 
   - class: CommandLineTool
     #baseCommand: ["echo"]
-    id: do-nothing
+    id: do-echo
     inputs: []
     outputs: []
     requirements:
